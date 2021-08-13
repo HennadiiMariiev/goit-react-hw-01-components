@@ -1,0 +1,61 @@
+.statistics {
+    min-width: 380px;
+    width: 60%;
+
+    background-color: #FAFAFA;
+    box-shadow: 7px 7px 15px -8px rgba(0,0,0,0.56);
+
+    margin-bottom: 2rem;
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+    
+        color: #939599;
+    
+        margin: 2rem 0 2rem;
+    }
+}
+
+.stat-list {
+    display: flex;
+
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100% / 5);
+    padding: 1rem 0 1rem;
+
+    color: #FAFAFA;
+
+    &__label {
+        font-size: 0.75rem;
+        margin-bottom: .5rem;
+    }
+    &__percentage {
+        font-size: 1.2rem;
+    }
+}
+
+$colorz: (
+    pointer0:  #dc5bde, 
+    pointer1: #2b72ff, 
+    pointer2: #65d0eb, 
+    pointer3: #eb658f, 
+    pointer4: #abf00f,
+);
+
+@each $pointer, $bgcolor in $colorz
+{
+  .item[colorpointer="#{$pointer}"] {
+      background: $bgcolor;
+    }
+}

@@ -1,0 +1,97 @@
+.profile {
+    min-width: 300px;
+    width: 50%;
+
+    box-shadow: 7px 7px 15px -8px rgba(0,0,0,0.56);
+
+    margin-bottom: 2rem;
+
+    &__description {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        padding: 2rem;
+        background-color: #FAFAFA;
+    
+        border-bottom: 1px solid #c1c3c7;
+    }
+
+    &__avatar {
+        width: 60%;
+        height: auto;
+        display: block;
+    
+        border-radius: 50%;
+        border: 1px solid #c1c3c7;
+        object-fit: cover;
+    
+        margin-bottom: 1.5rem;
+    }
+
+    &__name, 
+    &__tag, 
+    &__location {
+            margin: 0;
+    }
+
+    &__name, 
+    &__tag {
+        margin-bottom: 0.75rem;
+    }
+
+    &__tag, 
+    &__location {
+        color: #939599;
+    }
+}
+
+.stats {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+
+    background-color: aliceblue;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: calc(100% / 3);
+        padding: 1rem 0 1rem;
+    }
+
+    &__item:not(:last-child) {
+        border-right: 1px solid #c1c3c7;
+    }
+
+    &__label,
+    &__quantity {
+            margin: 0;
+    }
+
+    &__name {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    &__label {
+        font-size: 0.75rem;
+        color: #686869;
+    
+        margin-bottom: 0.5rem;
+    }
+
+    &__quantity {
+        font-weight: 600;
+        color: #3d3d3d;
+    }
+}
