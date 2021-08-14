@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 import '../Statistics/Statistics.scss';
 
-class Statistics extends React.Component {
-  render() {
-    const statLiItems = this.props.stats.map(({ id, label, percentage }, index) => {
+function Statistics (props) {
+    const statLiItems = props.stats.map(({ id, label, percentage }, index) => {
       return (
         <li className="item" key={id} colorpointer={'pointer' + index}>
           <span className="item__label">{label}</span>
@@ -16,12 +15,11 @@ class Statistics extends React.Component {
 
     return (
       <section className="statistics">
-        {this.props.title && <h2 className="statistics__title">{this.props.title}</h2>}
+        {props.title && <h2 className="statistics__title">{props.title}</h2>}
 
         <ul className="stat-list">{statLiItems}</ul>
       </section>
     );
-  }
 }
 
 Statistics.defaulProps = {

@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 import '../Profile/Profile.scss';
 
-class Profile extends React.Component {
-  render() {
-    const { userName, tag, location, avatar, stats } = this.props;
+function Profile (props) {
+    const { userName, tag, location, avatar, stats } = props;
     const { followers, views, likes } = stats;
 
     return (
@@ -33,7 +32,6 @@ class Profile extends React.Component {
         </ul>
       </div>
     );
-  }
 }
 
 Profile.propTypes = {
